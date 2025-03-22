@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: "Lato", serif;
+}
+body{
+    height: 100vh;
+    background-image: url(../src/assets/images/bg_login.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px 30px;
+    width: 400px;
+
+    border-radius: 10px;
+    background-color: #181A1CD6;
+    box-shadow: 0 0 10px rgba(255,255,255,.3);
+    text-align: center;
+}
+.login-container h3{
+    text-align: center;
+    color: #ffffff;
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.login-container h5{
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.login-container label{
+    text-align: left;
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 24px;
+    font-weight: 500;
+}
+.login-container form div input{
+    width: calc(100% - 20px);
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid ;
+    border-radius: 20px;
+    background-color: #E7E3FC61;
+    opacity: 38%;
+    color: #fff;
+    opacity: 68%;
+    font-size: 16px;
+    font-weight: 400;
+}
+.login-container .link-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.login-container .link-container a{
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffff;
+    text-decoration: none;
+}
+.sso-container {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+
+}
+.sso-container button{
+    width: 100%;
+    padding: 5px 0;
+    border: none;
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: #3D4142;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    color: #fff;
+    cursor: pointer;
+}
+.sso-container p{
+    color: #9D9EA1;
+    font-size: 14px;
+    font-weight: 500;
+}
+button #logo_google{
+    width: 20px;
+    height: 20px;
+}
+.btn-with-img img{
+    align-items: center;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+/* Media Queries untuk Responsif */
+@media screen and (max-width: 850px) {
+    .login-container {
+        width: 70%;
+        padding: 15px 20px;
+    }
+
+    .login-container h3 {
+        font-size: 40px;
+    }
+
+    .login-container h5 {
+        font-size: 28px;
+    }
+
+    .login-container label {
+        font-size: 24px;
+    }
+
+    .sso-container button {
+        font-size: 18px;
+    }
+    .login-container .link-container a{
+        font-size: 18px;
+        font-weight: 400;
+        color: #ffff;
+        text-decoration: none;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .login-container {
+        width: 70%;
+        padding: 10px 15px;
+    }
+
+    .login-container h3 {
+        font-size: 24px;
+    }
+
+    .login-container h5 {
+        font-size: 12px;
+    }
+
+    .login-container label {
+        font-size: 16px;
+    }
+
+    .sso-container button {
+        font-size: 14px;
+    }
+
+    .login-container .link-container a{
+        font-size: 14px;
+        font-weight: 400;
+        color: #ffff;
+        text-decoration: none;
+        margin-bottom: 20px;
+    }
+}
