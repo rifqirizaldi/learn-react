@@ -7,33 +7,40 @@
   font-family: "Lato", serif;
   box-sizing: border-box;
 }
+
 body {
   background-color: #181a1c;
+  font-size: 16px; /* Set base font size */
 }
+
 .fContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #333;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 2%; /* Use percentage for padding */
 }
+
 .wrapper {
   display: inline-flex;
   align-items: center;
   flex-direction: row;
 }
+
 .wrapper img {
-  width: 130px;
-  height: 50px;
+  max-width: 100%; /* Ganti width dengan max-width */
+  height: auto; /* Pastikan tinggi otomatis */
 }
+
 .navigation {
   display: flex;
   align-content: center;
   justify-content: center;
 }
+
 .navigation > li {
-  width: 30%;
+  flex: 1; /* Use flex to distribute space evenly */
   list-style: none;
   padding: 15px;
   text-decoration: none;
@@ -45,16 +52,20 @@ body {
   text-decoration: none;
   justify-content: space-between;
 }
+
 .profile {
-  width: 10%;
+  flex: 0 0 10%; /* Fixed width for profile */
   display: flex;
   align-content: center;
   justify-content: center;
   margin-right: 20px;
 }
-.profile span {
-  align-content: center;
+
+.profile img {
+  width: 10%; /* Use percentage for width */
+  height: auto; /* Maintain aspect ratio */
 }
+
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -65,26 +76,27 @@ body {
   border-radius: 4px;
   overflow: hidden;
 }
+
 .dropdown-menu a {
   display: block;
   padding: 10px;
   text-decoration: none;
   color: black;
 }
+
 .dropdown-menu a:hover {
   background-color: #f0f0f0;
 }
+
 .profile:hover .dropdown-menu {
   margin-top: 10vh;
   display: block;
 }
-.profile img {
-  width: 50px;
-  height: 50px;
-}
+
 h2 {
   color: #fff;
 }
+
 .row_poster {
   width: 100%;
   object-fit: contain;
@@ -92,55 +104,56 @@ h2 {
   max-height: 200px;
   transition: transform 450ms;
 }
+
 .row_posters {
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
   padding: 10px;
 }
+
 .row_poster:hover {
   transform: scale(1.1);
 }
 
-.row_poster_large {
-  max-height: 250px;
-}
-
-.row_poster_large:hover {
-  transform: scale(1.1);
-}
 .row {
   color: #fff;
   margin-left: 20px;
 }
-.banner{
-  background-image: url(images/list_film/big_rekomen.png);
+
+.banner {
+  background-image: url(../assets/images/list_film/big_rekomen.png);
   background-size: cover;
   background-position: center center;
   color: #fff;
   object-fit: contain;
-  height: 440px;
+  height: auto; /* Use auto for height */
+  min-height: 440px; /* Set a minimum height */
 }
-.banner_contents{
-  margin-left: 30px;
+
+.banner_contents {
+  margin-left: 2%; /* Use percentage for margin */
   padding-top: 140px;
-  height: 200px;
+  height: auto; /* Use auto for height */
 }
-.banner_title{
-  font-size: 48px;
+
+.banner_title {
+  font-size: 3rem; /* Use rem for font size */
   font-weight: 700;
   padding-bottom: 0.3em;
 }
-.banner_desc{
-  width: 45em;
+
+.banner_desc {
+  width: 100%; /* Use 100% for width */
   line-height: 1.3;
   padding-top: 1rem;
-  font-size: 18x;
+  font-size: 1.125rem; /* Use rem for font size */
   font-weight: 500;
   max-width: 400px;
-  height: 180px;
+  height: auto; /* Use auto for height */
 }
-.banner_btn{
+
+.banner_btn {
   position: relative;
   top: -40px; 
   cursor: pointer;
@@ -148,73 +161,78 @@ h2 {
   outline: none;
   border: none;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 1rem; /* Use rem for font size */
   border-radius: 0.2vw;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 2rem; /* Use rem for padding */
   margin-right: 1rem;
 }
-.banner_btn1{
+
+.banner_btn1 {
   background-color: #192DB7;
 }
-.banner_btn2{
+
+.banner_btn2 {
   background-color: #22282A;
 }
-.banner_btn:hover{
-  color : black;
+
+.banner_btn:hover {
+  color: black;
   background-color: #e6e6e6;
   transition: all 0.2s;
 }
-.banner_fade_bottom{
+
+.banner_fade_bottom {
   margin-top: 120px;
   height: 7.5rem;
   background-image: linear-gradient(180deg, transparent, rgba(37,37,37, .61), #111);
 }
-footer{
+
+footer {
   background-color: #111;
   padding-top: 3em;
 }
-.footer_container{
+
+.footer_container {
   margin: auto;
   display: flex;
   justify-content: center;
   flex-direction: row;
 }
-h2{
-  text-align: center;
-  font-size: 20px;
-  margin-bottom: 15px;
+
+.footer_content {
+  width: 100%;
 }
-.footer_content{
-  width: 33.3%;
-}
-.footer_content p{
+
+.footer_content p {
   width: 200px;
   margin: auto;
   padding: 7px;
 }
-#p_id{
+
+#p_id {
   color: #fff;
 }
-.footer_content ul{
+
+.footer_content ul {
   text-align: center;
 }
-.list{
+
+.list {
   padding: 0;
 }
-.list li{
+
+.list li {
   width: auto;
   text-align: center;
   list-style-type: none;
   padding: 7px;
   position: relative;
 }
-.list li::before{
+
+.list li::before {
   content: "";
   position: absolute;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   left: 50%;
   top: 100%;
   width: 0;
@@ -222,14 +240,17 @@ h2{
   background-color: #fff055;
   transition-duration: .5s;
 }
-.list li:hover::before{
+
+.list li:hover::before {
   width: 70px;
 }
-a{
+
+a {
   text-decoration: none;
   color: #fff;
 }
-a:hover{
+
+a:hover {
   color: #fff055;
 }
 

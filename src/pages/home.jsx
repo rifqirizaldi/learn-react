@@ -3,6 +3,7 @@ import '../styling/home.css';
 
 const Home = () => {
   return (
+
     <div>
       <div className="fContainer">
         <nav className="wrapper">
