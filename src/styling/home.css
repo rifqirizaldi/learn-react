@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
-* {
+ * {
   margin: 0;
   padding: 0;
   outline: 0;
   font-family: "Lato", serif;
   box-sizing: border-box;
-}
+} 
 
 body {
   background-color: #181a1c;
-  font-size: 16px; /* Set base font size */
+  font-size: 16px; 
 }
 
 .fContainer {
@@ -19,7 +19,7 @@ body {
   justify-content: space-between;
   background-color: #333;
   color: white;
-  padding: 10px 2%; /* Use percentage for padding */
+  padding: 10px 2%; 
 }
 
 .wrapper {
@@ -29,8 +29,8 @@ body {
 }
 
 .wrapper img {
-  max-width: 100%; /* Ganti width dengan max-width */
-  height: auto; /* Pastikan tinggi otomatis */
+  max-width: 100%; 
+  height: auto; 
 }
 
 .navigation {

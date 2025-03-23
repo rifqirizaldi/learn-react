@@ -5,13 +5,14 @@ import '../styling/register.css';
 const Register = () => {
   const [username, setUsername] = useState(''); // State untuk username
   const [password, setPassword] = useState(''); // State untuk password
-  const [repassword, setRepassword] = useState(''); // State untuk password
+  const [email, setEmail] = useState(''); // State untuk email
+  const [phonenumber, setPhonenumber] = useState(''); // State untuk repassword
   const navigate = useNavigate(); // Hook untuk navigasi
   
     const handleRegister = (e) => {
       e.preventDefault(); // Mencegah reload halaman
       // Validasi input
-      if (username.trim() === '' || password.trim() === '' || repassword.trim() === '') {
+      if (username.trim() === '' || password.trim() === '' || email.trim() === '' || phonenumber.trim() === '') {
         alert('Pastikan semua input terisi!');
         return; // Menghentikan eksekusi jika input tidak valid
       }
@@ -28,16 +29,20 @@ const Register = () => {
 
       <form onSubmit={handleRegister}>
         <div className="form-group">
-            <label htmlFor="username">Username</label>
-            <input type="text" id="username" value={username} name="username" placeholder="Masukkan Username/Email" onChange={(e) => setUsername(e.target.value)}/>
+            <label htmlFor="username">Name</label>
+            <input type="text" id="username" value={username} name="username" placeholder="Masukkan Nama" onChange={(e) => setUsername(e.target.value)}/>
         </div>
         <div className="form-group">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="email">Email</label>
+            <input type="email" id="email" value={email} name="email" placeholder="Masukkan email" onChange={(e) => setEmail(e.target.value)}/>
+        </div>
+        <div className="form-group">
+            <label htmlFor="phone">Phone Number</label>
+            <input type="tel" id="phone" value={phonenumber} name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Masukkan nomor telepon" onChange={(e) => setPhonenumber(e.target.value)}/>
+        </div>
+        <div className="form-group">
+            <label htmlFor="password">Masukkan Password</label>
             <input type="password" id="password" value={password} name="password" placeholder="Masukkan Password" onChange={(e) => setPassword(e.target.value)}/>
-        </div>
-        <div className="form-group">
-            <label htmlFor="password">Konfimasi Password</label>
-            <input type="password" id="password" value={repassword} name="password" placeholder="Masukkan Password" onChange={(e) => setRepassword(e.target.value)}/>
         </div>
         <div className="sso-container">
         <button id="masuk-btn" type="submit" className="btn">Daftar</button>
